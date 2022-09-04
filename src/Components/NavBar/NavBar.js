@@ -8,6 +8,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import logo from "../../imagenes/nombre.png"
 
 const Navegacion = () => {
     return (
@@ -20,8 +21,8 @@ const Navegacion = () => {
                     </span>
                 </div>
                 <Navbar key="xl" bg="light" expand="xl" className="mb-3">
-                    <Container fluid>
-                        <Navbar.Brand href="#">Estudio Coral</Navbar.Brand>
+                    <Container fluid style = {style.navEstilos}>
+                        <Navbar.Brand ><img style = {style.imagenLogo} src={logo} alt="" /></Navbar.Brand>
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xl`} />
                         <Navbar.Offcanvas
                             id={`offcanvasNavbar-expand-xl`}
@@ -73,7 +74,14 @@ const style = {
         justifyContent : 'center',
         alignItems : 'center',
         paddingTop : '10px',
-        backgroundColor : 'antiquewhite',
+        backgroundColor : '#C6B9B5',
+    },
+    imagenLogo : {
+        width : '200px',
+        height : '100%',
+    },
+    navEstilos : {
+        backgroundColor: '#fceeea',
     }
 }
 
