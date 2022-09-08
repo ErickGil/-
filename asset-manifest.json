@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/sitio-react/static/css/main.4de0fa12.css",
+    "main.js": "/sitio-react/static/js/main.e0fb7079.js",
+    "static/media/nombre.jpeg": "/sitio-react/static/media/nombre.4d7d6d1bd1dbed9a9fb7.jpeg",
+    "index.html": "/sitio-react/index.html",
+    "main.4de0fa12.css.map": "/sitio-react/static/css/main.4de0fa12.css.map",
+    "main.e0fb7079.js.map": "/sitio-react/static/js/main.e0fb7079.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4de0fa12.css",
+    "static/js/main.e0fb7079.js"
+  ]
+}
