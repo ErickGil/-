@@ -1,12 +1,13 @@
 import React from "react";
 import AcUnitIcon from '@mui/icons-material/AcUnit';
+import { Text } from '@chakra-ui/react'
 const Banner = () =>{
     return (
         <>
             <div style ={style.container}>
                     <span>
                         <p>
-                            < AcUnitIcon /> Confiabilidad y Calidad < AcUnitIcon/>
+                            < AcUnitIcon /><Text as='cite'>CONFIABILIDAD Y CALIDAD</Text> < AcUnitIcon/>
                         </p>
                     </span>
                 </div>
