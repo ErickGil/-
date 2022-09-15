@@ -21,6 +21,7 @@ const style = {
         justifyContent : 'center',
         alignItems : 'center',
         paddingTop : '10px',
+        paddingBottom : '56px',
         backgroundColor : '#76B1E0',
     }, 
 }

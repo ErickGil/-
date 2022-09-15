@@ -16,6 +16,8 @@ const ItemCount = ({initial, stock, onAdd }) => {
 
     
 
+    
+
 
     const alerta = () => {
         onAdd(contador);

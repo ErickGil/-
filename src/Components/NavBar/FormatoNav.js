@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from "../../imagenes/nombre.jpeg"
+import logo from "../../assets/nombre.jpeg"
 import CartWidget from "../Cartwidget/CartWidget"
 
 const FormatoNav = () => {
