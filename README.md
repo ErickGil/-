@@ -2,5 +2,5 @@
 
 Este Proyecto tratara de una pagina de venta de hielo
 
-Para esta entrega se creo un contador y la carpeta itemcount para la notificaciones de agrego una alerta 
+Para esta entrega se creo la carpeta item list y item se crearon las card, y se creo los productos
 
