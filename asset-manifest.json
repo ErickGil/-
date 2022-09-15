@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/sitio-react/static/css/main.4de0fa12.css",
-    "main.js": "/sitio-react/static/js/main.886d949b.js",
+    "main.css": "/sitio-react/static/css/main.4b36f329.css",
+    "main.js": "/sitio-react/static/js/main.025e47c4.js",
+    "static/media/bidonDeAgua.png": "/sitio-react/static/media/bidonDeAgua.ad9c5b1e7c4ace029afa.png",
+    "static/media/hieloDe2.5.png": "/sitio-react/static/media/hieloDe2.5.eefc9117a0142e515ebc.png",
+    "static/media/jugoDeNaranja.png": "/sitio-react/static/media/jugoDeNaranja.7b92ea056ea539320f99.png",
+    "static/media/hieloDe10.png": "/sitio-react/static/media/hieloDe10.e4e251eb0091b44b45ef.png",
+    "static/media/barraDeHielo.png": "/sitio-react/static/media/barraDeHielo.81d2cd22f08577f261af.png",
     "static/media/nombre.jpeg": "/sitio-react/static/media/nombre.4d7d6d1bd1dbed9a9fb7.jpeg",
     "index.html": "/sitio-react/index.html",
-    "main.4de0fa12.css.map": "/sitio-react/static/css/main.4de0fa12.css.map",
-    "main.886d949b.js.map": "/sitio-react/static/js/main.886d949b.js.map"
+    "main.4b36f329.css.map": "/sitio-react/static/css/main.4b36f329.css.map",
+    "main.025e47c4.js.map": "/sitio-react/static/js/main.025e47c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.4de0fa12.css",
-    "static/js/main.886d949b.js"
+    "static/css/main.4b36f329.css",
+    "static/js/main.025e47c4.js"
   ]
 }
