@@ -33,7 +33,7 @@ const Item = ({ product }) => {
                         </div>
                         <div className="card-action">
                             <Text textAlign={[  'center' ]}>Precio : ${product.price}  Stock disponible: {product.stock} </Text>
-                            <ItemCount initial={1} stock={6} onAdd={onAdd} className="botones" />
+                            <ItemCount initial={1} stock={product.stock} onAdd={onAdd} className="botones" />
                         </div>
                     </div>
                 </div>
