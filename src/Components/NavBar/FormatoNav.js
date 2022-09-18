@@ -1,74 +1,58 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Offcanvas from "react-bootstrap/Offcanvas";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from "../../assets/nombre.jpeg"
-import CartWidget from "../Cartwidget/CartWidget"
+import React from 'react'
+import "materialize-css/dist/css/materialize.min.css";
+import { MenuResponsive } from './utilsNav/menuResponsive';
+import logo from "../../assets/img/logo.jpeg";
+import {Dropdown} from "./utilsNav/dropdown";
+
+
 
 const FormatoNav = () => {
+
     return (
         <>
-        <Navbar key="xl" bg="light" expand="xl" className="mb-3">
-                    <Container fluid style = {style.navEstilos}>
-                        <Navbar.Brand ><img style = {style.imagenLogo} src={logo} alt="" /></Navbar.Brand>
-                        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xl`} />
-                        <Navbar.Offcanvas
-                            id={`offcanvasNavbar-expand-xl`}
-                            aria-labelledby={`offcanvasNavbarLabel-expand-xl`}
-                            placement="end"
-                        >
-                            <Offcanvas.Header closeButton>
-                                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-xl}`}>
-                                    Enc. Sonia Lazaro
-                                </Offcanvas.Title>
-                            </Offcanvas.Header>
-                            <Offcanvas.Body>
-                                <Nav  className="justify-content-end flex-grow-1 pe-3">
-                                    <a style ={style.navEstilosLetras}  href="#action1">Inicio</a>
-                                    <a style ={style.navEstilosLetras}  href="#action2">Sobre Nosotros</a>
-                                    <NavDropdown style ={style.navEstilosLetras}
-                                        title="Productos"
-                                        id={`offcanvasNavbarDropdown-expand-xl`}
-                                    >
-                                        <NavDropdown.Item href="#action3">Bolsas de hielo</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action4">
-                                            Barras
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Item href="#action5">
-                                            Bidones
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
-                                </Nav>
-                                < CartWidget  /> 
-                            </Offcanvas.Body>
-                        </Navbar.Offcanvas>
-                        
-                    </Container>
-                </Navbar>
+{/* ---formato del nav-- */}
+            <div className="navbar-fixed ">
+              <nav  style={style.estilosNav}>
+                <div className="nav-wrapper" style={style.alinecion}>
+                  <img src={logo} alt="logo" className="brand-logo center" style={style.estilosImagen}/> 
+                  <a  href="#!" data-target="mobile-demo" className="sidenav-trigger "  ><MenuResponsive/></a> 
+                  <ul className="right hide-on-med-and-down">
+                    <li><a  style={style.esitlosLetras} href="index.html">Inicio</a></li>
+                    <li><a style={style.esitlosLetras}  href="#!">Sobre Nosotros</a></li>
+                    <li style={style.esitlosLetras}><Dropdown/></li>
+                    <li style={style.esitlosLetras}> <i class="large material-icons" style={style.estilosIcono} >shopping_cart</i></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
         </>
     );
 }
+
 const style = {
-    
-    imagenLogo : {
-        width : '150px',
-        height : '100%',
-        marginLeft : '10px',
-    },
-    navEstilos : {
-        backgroundColor: 'white',
-    },
-    navEstilosLetras : {
-        display: 'block',
-        padding: '0.5rem',
-        color: 'black',
-        textDecoration : 'none',
-        alignSelf: 'center',
-        
-    }
-}
+  estilosNav:{
+    height: "135px",
+    backgroundColor: "#00416a",
+  },
+  estilosImagen:{
+    height: "inherit",
+    borderRadius: "30px",
+  },
+  esitlosLetras:{
+    fontSize: "1.3rem",
+    paddingLeft:"10px",
+  },
+  alinecion:{
+    display: "flex",
+    justifyContent: "right",
+    alignItems: "center",
+  },
+  estilosIcono:{
+    fontSize: "35px",
+  }
+};
+
+
+
 
 export default FormatoNav

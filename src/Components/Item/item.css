@@ -3,9 +3,10 @@
 .container{
     max-width: none;
     width: 350px ;
-    height : 800px ;
+    height : 700px ;
     padding-left: 20px ;
     padding-bottom: 20px ;
+    padding-top: 40px;
 }
 
 /* estilos card */
@@ -24,7 +25,7 @@
 }
 
 .card .card-image img { 
-        height: 500px;
+        height: 400px;
     }
 
 /* botones */
