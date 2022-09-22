@@ -1,17 +1,16 @@
 import React from "react";
-import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+
 export const CartWidget = () => {
     return (
         <>
-            <ShoppingCartCheckoutIcon style={style.carroEstilo} />,
+            <i style={style.estilosIcono} className="medium material-icons">shopping_cart</i>
         </>
     );
 };
-
 const style = {
-    carroEstilo: {
-        alignSelf: "center",
-    },
-};
+    estilosIcono:{
+        fontSize: "35px",
+    }
+}
 
 export default CartWidget;

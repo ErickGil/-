@@ -1,9 +1,9 @@
 import React from "react";
-import { Text,Spinner } from "@chakra-ui/react";
-import {products} from "../assets/productos";
-import { customFetch } from "../utils/customFetch";
+import { Text,SkeletonCircle, SkeletonText,Box } from "@chakra-ui/react";
+import {products} from "../../assets/productos";
+import { customFetch } from "../../utils/customFetch";
 import { useState, useEffect} from "react";
-import { ItemList } from "../Components/ItemList";
+import { ItemList } from "../../Components/ItemList";
 
 
 const ItemListContainer = ({ greeting }) => {
@@ -29,12 +29,10 @@ const ItemListContainer = ({ greeting }) => {
             </div>
             {
             loading ? 
-                <Spinner  thickness='4px'
-                speed='0.65s'
-                emptyColor='gray.200'
-                color='blue.500'
-                size='xl'
-                ml="50%" /> 
+            <Box padding='6' boxShadow='lg' bg='white' height='600px'>
+            <SkeletonCircle size='12' />
+            <SkeletonText mt='4' noOfLines={10} spacing='6' />
+            </Box>
             :
                 <div style={style.estiloItems}><ItemList listProducts={listProducts} /></div> 
             }

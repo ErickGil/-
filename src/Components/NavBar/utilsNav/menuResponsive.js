@@ -11,6 +11,7 @@ import {  Drawer,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { Dropdown } from "./dropdown";
+import CartWidget from "../../Cartwidget/CartWidget";
 
 
 
@@ -50,7 +51,7 @@ const MenuResponsive = () => {
                             <ListItem  pt={5}><Link>Inicio</Link></ListItem>
                             <ListItem pt={5}><Link>Sombre Nosotros</Link></ListItem>
                             <ListItem pt={5}><Dropdown/></ListItem>
-                            <ListItem pt={5}> <i class="medium material-icons">shopping_cart</i></ListItem>
+                            <ListItem pt={5}> <CartWidget/></ListItem>
                         </UnorderedList>
                     </DrawerBody>
                 </DrawerContent>

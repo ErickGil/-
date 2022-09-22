@@ -1,8 +1,9 @@
 import React from "react";
 import NavBar from "./Components/NavBar/NavBar"
-import ItemListContainer from "../src/Container/ItemListContainer"
-import { ChakraProvider } from '@chakra-ui/react'
+import ItemListContainer from "./Container/ItemListContainer/ItemListContainer"
+import { ChakraProvider, Divider  } from '@chakra-ui/react'
 import "materialize-css/dist/css/materialize.min.css";
+import ItemDetailContainer from "./Container/ItemDetailContainer/ItemDetailContainer";
 
 
 
@@ -16,6 +17,8 @@ const App = () =>{
     <ChakraProvider>
         <NavBar/>
         <ItemListContainer greeting = {mensaje} />
+        <Divider />
+        <ItemDetailContainer/>
     </ChakraProvider>
     </>
     

@@ -3,6 +3,7 @@ import "materialize-css/dist/css/materialize.min.css";
 import { MenuResponsive } from './utilsNav/menuResponsive';
 import logo from "../../assets/img/logo.jpeg";
 import {Dropdown} from "./utilsNav/dropdown";
+import CartWidget from "../Cartwidget/CartWidget";
 
 
 
@@ -20,7 +21,7 @@ const FormatoNav = () => {
                     <li><a  style={style.esitlosLetras} href="index.html">Inicio</a></li>
                     <li><a style={style.esitlosLetras}  href="#!">Sobre Nosotros</a></li>
                     <li style={style.esitlosLetras}><Dropdown/></li>
-                    <li style={style.esitlosLetras}> <i class="large material-icons" style={style.estilosIcono} >shopping_cart</i></li>
+                    <li style={style.esitlosLetras}> <CartWidget /></li>
                   </ul>
                 </div>
               </nav>
@@ -47,9 +48,7 @@ const style = {
     justifyContent: "right",
     alignItems: "center",
   },
-  estilosIcono:{
-    fontSize: "35px",
-  }
+  
 };
 
 

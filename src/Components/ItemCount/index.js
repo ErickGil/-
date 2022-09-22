@@ -26,7 +26,7 @@ const ItemCount = ({initial, stock, onAdd }) => {
         <>  
         
             <Container d="flex"  alignItems="center"     >
-                <HStack p="10px" justifyContent="center">
+                <HStack p="15px" justifyContent="center">
                     <Button disabled={contador <= 1} onClick={restar}>-</Button>
                     <Text>{contador}</Text>
                     <Button disabled={contador === stock} onClick={sumar}>+</Button>
