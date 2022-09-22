@@ -2,5 +2,5 @@
 
 Este Proyecto tratara de una pagina de venta de hielo
 
-Para esta entrega se creo la carpeta item list y item se crearon las card, y se creo los productos
+Para esta entrega se creo la carpeta itemDetailCointainer con new promise y tambien se creo un itemdetail de un solo producto
 
