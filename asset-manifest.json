@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sitio-react/static/css/main.a4009a9e.css",
-    "main.js": "/sitio-react/static/js/main.c009671b.js",
+    "main.js": "/sitio-react/static/js/main.a06889b9.js",
     "static/media/bolsa2.5Kg.png": "/sitio-react/static/media/bolsa2.5Kg.5ae327fc9494faa6c108.png",
     "static/media/bidonDeAgua.png": "/sitio-react/static/media/bidonDeAgua.a94154f91d7f854d2d29.png",
     "static/media/unaBarra.png": "/sitio-react/static/media/unaBarra.e14bea71e8e417515733.png",
@@ -10,10 +10,10 @@
     "static/media/logo.jpeg": "/sitio-react/static/media/logo.4d7d6d1bd1dbed9a9fb7.jpeg",
     "index.html": "/sitio-react/index.html",
     "main.a4009a9e.css.map": "/sitio-react/static/css/main.a4009a9e.css.map",
-    "main.c009671b.js.map": "/sitio-react/static/js/main.c009671b.js.map"
+    "main.a06889b9.js.map": "/sitio-react/static/js/main.a06889b9.js.map"
   },
   "entrypoints": [
     "static/css/main.a4009a9e.css",
-    "static/js/main.c009671b.js"
+    "static/js/main.a06889b9.js"
   ]
 }
