@@ -17,12 +17,12 @@ const FormatoNav = () => {
             <div className="navbar-fixed ">
               <nav  style={style.estilosNav}>
                 <div className="nav-wrapper" style={style.alinecion}>
-                  <Link to={"/sitio-react/"} style={style.estilosImagen}>
+                  <Link to="/sitio-react/" style={style.estilosImagen}>
                     <img style={style.estilosImagen} src={logo} alt="logo" className="brand-logo center" /> 
                   </Link>
                   <Link data-target="mobile-demo" className="sidenav-trigger "  ><MenuResponsive/></Link> 
                   <ul className="right hide-on-med-and-down">
-                    <li><Link to={"/sitio-react/"} style={style.esitlosLetras} >Inicio</Link></li>
+                    <li><Link to="/sitio-react/" style={style.esitlosLetras} >Inicio</Link></li>
                     <li><Link to={"/Sobre_Nosotros"} style={style.esitlosLetras}  >Sobre Nosotros</Link></li>
                     <li style={style.esitlosLetras}><Dropdown/></li>
                     <li style={style.esitlosLetras}><Link to={"/carrito"}> <CartWidget /></Link></li>
