@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/sitio-react/static/css/main.a4009a9e.css",
-    "main.js": "/sitio-react/static/js/main.5893c265.js",
-    "static/media/Bolsa2.5Kg.png": "/sitio-react/static/media/Bolsa2.5Kg.5ae327fc9494faa6c108.png",
-    "static/media/BidonDeAgua.png": "/sitio-react/static/media/BidonDeAgua.a94154f91d7f854d2d29.png",
-    "static/media/UnaBarra.png": "/sitio-react/static/media/UnaBarra.e14bea71e8e417515733.png",
-    "static/media/Bolsa10Kg.png": "/sitio-react/static/media/Bolsa10Kg.9d4c1ee56d91337cc55c.png",
-    "static/media/JugoDeNaranja.png": "/sitio-react/static/media/JugoDeNaranja.e696ef11a7aa878f559b.png",
+    "main.js": "/sitio-react/static/js/main.8e33906f.js",
+    "static/media/bolsa2.5Kg.png": "/sitio-react/static/media/bolsa2.5Kg.5ae327fc9494faa6c108.png",
+    "static/media/bidonDeAgua.png": "/sitio-react/static/media/bidonDeAgua.a94154f91d7f854d2d29.png",
+    "static/media/unaBarra.png": "/sitio-react/static/media/unaBarra.e14bea71e8e417515733.png",
+    "static/media/bolsa10Kg.png": "/sitio-react/static/media/bolsa10Kg.9d4c1ee56d91337cc55c.png",
+    "static/media/jugoDeNaranja.png": "/sitio-react/static/media/jugoDeNaranja.e696ef11a7aa878f559b.png",
     "static/media/logo.jpeg": "/sitio-react/static/media/logo.4d7d6d1bd1dbed9a9fb7.jpeg",
     "index.html": "/sitio-react/index.html",
     "main.a4009a9e.css.map": "/sitio-react/static/css/main.a4009a9e.css.map",
-    "main.5893c265.js.map": "/sitio-react/static/js/main.5893c265.js.map"
+    "main.8e33906f.js.map": "/sitio-react/static/js/main.8e33906f.js.map"
   },
   "entrypoints": [
     "static/css/main.a4009a9e.css",
-    "static/js/main.5893c265.js"
+    "static/js/main.8e33906f.js"
   ]
 }
