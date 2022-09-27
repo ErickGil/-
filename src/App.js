@@ -1,9 +1,12 @@
 import React from "react";
 import NavBar from "./Components/NavBar/NavBar"
 import ItemListContainer from "./Container/ItemListContainer/ItemListContainer"
-import { ChakraProvider, Divider  } from '@chakra-ui/react'
+import { ChakraProvider,   } from '@chakra-ui/react'
 import "materialize-css/dist/css/materialize.min.css";
 import ItemDetailContainer from "./Container/ItemDetailContainer/ItemDetailContainer";
+import { Routes,Route,BrowserRouter  } from "react-router-dom";
+import { Cart } from "./Container/CartView/Cart";
+
 
 
 
@@ -15,10 +18,16 @@ const App = () =>{
   return (
     <>
     <ChakraProvider>
-        <NavBar/>
-        <ItemListContainer greeting = {mensaje} />
-        <Divider />
-        <ItemDetailContainer/>
+        <BrowserRouter>
+          <NavBar/>
+        <Routes>
+          <Route path="/" element={<ItemListContainer greeting = {mensaje} />}/>
+          <Route path="/carrito" element= {<Cart/>}/>
+          <Route path="/categoria/:idCategoria"  element={<ItemListContainer greeting = {mensaje} />} />
+          <Route path = "/detalles/:id" element={<ItemDetailContainer/>}/>
+        </Routes>
+        </BrowserRouter>
+        
     </ChakraProvider>
     </>
     

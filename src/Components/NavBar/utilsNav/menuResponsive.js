@@ -7,11 +7,13 @@ import {  Drawer,
     DrawerCloseButton,
     Button,useDisclosure,Divider, 
     ListItem,
-    UnorderedList,Link  
+    UnorderedList,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { Dropdown } from "./dropdown";
 import CartWidget from "../../Cartwidget/CartWidget";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -48,10 +50,10 @@ const MenuResponsive = () => {
                     <DrawerBody>
                         <Divider />
                         <UnorderedList fontSize={20}>
-                            <ListItem  pt={5}><Link>Inicio</Link></ListItem>
-                            <ListItem pt={5}><Link>Sombre Nosotros</Link></ListItem>
+                            <ListItem  pt={5}><Link to={"/"}>Inicio</Link></ListItem>
+                            <ListItem pt={5}><Link to={"Sobre_Nosotros"}>Sobre Nosotros</Link></ListItem>
                             <ListItem pt={5}><Dropdown/></ListItem>
-                            <ListItem pt={5}> <CartWidget/></ListItem>
+                            <ListItem pt={5}><Link to={"/carrito"}> <CartWidget /></Link></ListItem>
                         </UnorderedList>
                     </DrawerBody>
                 </DrawerContent>

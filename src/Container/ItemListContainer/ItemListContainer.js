@@ -4,22 +4,26 @@ import {products} from "../../assets/productos";
 import { customFetch } from "../../utils/customFetch";
 import { useState, useEffect} from "react";
 import { ItemList } from "../../Components/ItemList";
+import { useParams } from "react-router-dom";
+
 
 
 const ItemListContainer = ({ greeting }) => {
-    
+
+    let {idCategoria} = useParams();
     const [listProducts, setListProducts] = useState([])
     const [loading, setLoading] = useState (true)
 
     useEffect(() => {
         customFetch(products)
             .then(res => {
+                const result = res.filter(products => products.category === idCategoria);
+                idCategoria ? setListProducts(result) : setListProducts(res);
                 setLoading(false)
-                setListProducts(res)
             } )
-},[])
+},[idCategoria])
 
-
+        
     
 
     return (
