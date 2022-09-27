@@ -2,7 +2,7 @@
   "name": "sitio-app-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://erickgil.github.io/",
+  "homepage": "https://erickgil.github.io/sitio-react/",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.9",
     "@chakra-ui/react": "^2.3.2",
