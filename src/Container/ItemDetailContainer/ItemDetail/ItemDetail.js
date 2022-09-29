@@ -1,10 +1,14 @@
-import { Text, Heading, useToast } from "@chakra-ui/react";
-import React from "react";
+import {  useToast } from "@chakra-ui/react";
+import React, {useState} from "react";
 import { ItemCount } from "../../../Components/ItemCount";
+import ItemCompra from "../../../Components/ItemCompra/ItemCompra";
+import "./estilosDetail.css"
 
 const ItemDetail = ({ producto }) => {
+    const [agregar, setAgregar] = useState(true)
     const toast = useToast();
     const onAdd = (contador) => {
+        setAgregar(false)
         toast({
             title: `Añadiste ${contador}  ${producto.name} `,
             description: "Nos comunicaremos contigo en 15 min aprox",
@@ -17,48 +21,39 @@ const ItemDetail = ({ producto }) => {
 
     return (
         <>
-            <div style={estilos.container}>
-                <img style={estilos.img} src={producto.image} alt="foto" />
-                <div style={estilos.Infocontainer}>
-                    <Heading mb={4}>{producto.name} </Heading>
-                    <Text fontSize="3xl">Precio ${producto.price} </Text>
-                    <Text fontSize="2xl">Descripcion : {producto.description} </Text>
-                    <Text fontSize="2xl">Consultar por sabores de temporada </Text>
-                    <Text fontSize="2xl">Stock : {producto.stock} </Text>
-                    <ItemCount
-                        initial={1}
-                        stock={producto.stock}
-                        onAdd={onAdd}
-                        className="botones"
-                    />
+            <div className="wrapper">
+                <div className="product-img">
+                    <img src={producto.image}  height="420" width="327" alt="s" />
+                </div>
+                <div className="product-info">
+                    <div className="product-text">
+                        <h1>{producto.name} </h1>
+                        <h2>preguntar precio por mayor</h2>
+                        <p>Harvest Vases are a reinterpretation of peeled fruits and vegetables as functional objects. The surfaces appear to be sliced and pulled aside, allowing room for growth. </p>
+                    </div>
+                    <div className="product-price-btn">
+                        <p>Stock Disponible : {producto.stock} </p>
+                        <p><span>$</span>{producto.price}</p>
+                        {
+                                agregar ?
+                                <ItemCount
+                                initial={1}
+                                stock={producto.stock}
+                                onAdd={onAdd}
+                                className="botones"
+                            />:
+                                <ItemCompra/>
+                                }
+
+                    </div>
                 </div>
             </div>
-        </>
-    );
-};
-const estilos = {
-    container: {
-        display: "flex",
-        flexDirection: "row",
-        alingItems: "center",
-        width: "80%",
-        marginLeft: "auto",
-        marginRight: "auto",
-        color: "black",
-        marginTop: "100px",
 
-        height: "700px  ",
-        backgroundColor: "#F3EED9",
-    },
-    Infocontainer: {
-        display: "flex",
-        flexDirection: "column",
-        alingItems: "center",
-        padding: "50px",
-    },
-    img: {
-        width: "40%",
-    },
+        </>
+    )
 };
+
+
+
 
 export default ItemDetail;
