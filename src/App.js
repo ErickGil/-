@@ -6,6 +6,7 @@ import "materialize-css/dist/css/materialize.min.css";
 import ItemDetailContainer from "./Container/ItemDetailContainer/ItemDetailContainer";
 import { Routes,Route,BrowserRouter  } from "react-router-dom";
 import { Cart } from "./Container/CartView/Cart";
+import CartProvider from "./Context/CartContext";
 
 
 
@@ -19,13 +20,15 @@ const App = () =>{
     <>
     <ChakraProvider>
         <BrowserRouter>
-          <NavBar/>
-        <Routes>
-          <Route path="/sitio-react/" element={<ItemListContainer greeting = {mensaje} />}/>
-          <Route path="/carrito" element= {<Cart/>}/>
-          <Route path="/categoria/:idCategoria"  element={<ItemListContainer greeting = {mensaje} />} />
-          <Route path = "/detalles/:id" element={<ItemDetailContainer/>}/>
-        </Routes>
+          <CartProvider >
+            <NavBar/>
+            <Routes>
+              <Route path="/sitio-react/" element={<ItemListContainer greeting = {mensaje} />}/>
+              <Route path="/carrito" element= {<Cart/>}/>
+              <Route path="/categoria/:idCategoria"  element={<ItemListContainer greeting = {mensaje} />} />
+              <Route path = "/detalles/:id" element={<ItemDetailContainer/>}/>
+            </Routes>
+          </CartProvider>
         </BrowserRouter>
         
     </ChakraProvider>

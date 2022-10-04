@@ -3,12 +3,15 @@ import React, {useState} from "react";
 import { ItemCount } from "../../../Components/ItemCount";
 import ItemCompra from "../../../Components/ItemCompra/ItemCompra";
 import "./estilosDetail.css"
+import { useCartContext } from "../../../Context/CartContext";
 
 const ItemDetail = ({ producto }) => {
     const [agregar, setAgregar] = useState(true)
+    const {addItem} = useCartContext();
     const toast = useToast();
     const onAdd = (contador) => {
         setAgregar(false)
+        addItem(producto, contador);
         toast({
             title: `Añadiste ${contador}  ${producto.name} `,
             description: "Nos comunicaremos contigo en 15 min aprox",
