@@ -2,5 +2,4 @@
 
 Este Proyecto tratara de una pagina de venta de hielo
 
-Para esta entrega se impremento react context para mantener el estado de compra al seleccionar un producto se puede ver el resulato por consola
-
+Para esta entrega se se realizo la vista del componetne cart que es el desglose de la compra y se actualizo el cartWidget 

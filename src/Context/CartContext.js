@@ -15,7 +15,10 @@ const CartProvider = ( {children} ) => {
             setCart([...cart,{...item, cantidad}]);
         }
     };
-console.log(cart);
+    const precioTotal = () => {
+        return cart.reduce ((prev,act) => prev + act.cantidad * act.price, 0);
+    }
+    const productsTotal = () => cart.reduce ((acumulador, productoActual) => acumulador + productoActual.cantidad, 0);
 
     const existItem = (id) => cart.some((producto) => producto.id === id) ;
 
@@ -32,7 +35,7 @@ console.log(cart);
 
         return (
             <>
-                <CartContext.Provider value={{cart, removeItem, clear, addItem} }> {children} </CartContext.Provider>
+                <CartContext.Provider value={{cart, removeItem, clear, addItem, precioTotal, productsTotal} }> {children} </CartContext.Provider>
             </>
         )
 }
