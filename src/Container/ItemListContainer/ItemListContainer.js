@@ -1,27 +1,31 @@
 import React from "react";
 import { Text,SkeletonCircle, SkeletonText,Box } from "@chakra-ui/react";
-import {products} from "../../assets/productos";
-import { customFetch } from "../../utils/customFetch";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { useState, useEffect} from "react";
 import { ItemList } from "../../Components/ItemList";
 import { useParams } from "react-router-dom";
+import { db } from "../../firebase/config";
 
 
 
 const ItemListContainer = ({ greeting }) => {
 
-    let {idCategoria} = useParams();
+    const {idCategoria} = useParams();
     const [listProducts, setListProducts] = useState([])
     const [loading, setLoading] = useState (true)
 
     useEffect(() => {
-        customFetch(products)
-            .then(res => {
-                const result = res.filter(products => products.category === idCategoria);
-                idCategoria ? setListProducts(result) : setListProducts(res);
-                setLoading(false)
-            } )
-},[idCategoria])
+        const queryCollection= collection(db, 'products');
+        if (idCategoria){
+            const queryFilter = query(queryCollection, where("category", "==",idCategoria))
+            getDocs(queryFilter)
+                .then( res => setListProducts(res.docs.map(product => ({id:product.id, ...product.data()})) ))
+        }else{
+            getDocs(queryCollection)
+                .then( res => setListProducts(res.docs.map(product => ({id:product.id, ...product.data()})) ))
+            }
+            setLoading(false)
+            }, [idCategoria])
 
         
     

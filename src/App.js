@@ -26,7 +26,7 @@ const App = () =>{
               <Route path="/sitio-react/" element={<ItemListContainer greeting = {mensaje} />}/>
               <Route path="/carrito" element= {<Cart/>}/>
               <Route path="/categoria/:idCategoria"  element={<ItemListContainer greeting = {mensaje} />} />
-              <Route path = "/detalles/:id" element={<ItemDetailContainer/>}/>
+              <Route path = "/detalles/:detalleId" element={<ItemDetailContainer/>}/>
             </Routes>
           </CartProvider>
         </BrowserRouter>

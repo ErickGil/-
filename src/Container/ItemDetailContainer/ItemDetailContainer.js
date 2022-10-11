@@ -1,24 +1,25 @@
 import React,{useState,useEffect} from "react";
-import { products } from "../../assets/productos";
+import { doc, getDoc } from "firebase/firestore";
 import {Progress } from "@chakra-ui/react";
 import ItemDetail from "./ItemDetail/ItemDetail"
-import { customFetch } from "../../utils/customFetch";
 import { useParams } from "react-router-dom";
+import { db } from "../../firebase/config";
 
 
     const ItemDetailContainer = () => {
         
         const [item, setItem] = useState({} )
         const [loading, setLoading] = useState (true)
-        const {id} = useParams ();
+        const {detalleId} = useParams ();
     
         useEffect(() => {
-            customFetch(products, parseInt(id)) 
-            .then((res) => {
-                setLoading(false)
-                setItem(res)
+            const queryDoc = doc(db,"products",detalleId);
+            getDoc(queryDoc)
+                .then((res) => {
+                    setItem({id:res.id, ...res.data()})
+                    setLoading(false)
                 } )
-        },[id])
+        },[detalleId])
 
 
         return (

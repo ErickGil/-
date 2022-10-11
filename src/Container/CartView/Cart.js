@@ -35,7 +35,7 @@ export const Cart = () => {
 const style = {
     estilosDivIma :{
         display: "flex",
-        marginTop: "50px",
+        marginTop: "100px",
         flexDirection: "column",
         alignItems: "center",
     },
