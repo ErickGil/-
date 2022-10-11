@@ -16,18 +16,13 @@ const ItemListContainer = ({ greeting }) => {
 
     useEffect(() => {
         const queryCollection= collection(db, 'products');
-        if (idCategoria){
-            const queryFilter = query(queryCollection, where("category", "==",idCategoria))
-            getDocs(queryFilter)
+        const docsQuery = idCategoria ?  query(queryCollection, where("category", "==",idCategoria)) : queryCollection
+            getDocs(docsQuery)
                 .then( res => setListProducts(res.docs.map(product => ({id:product.id, ...product.data()})) ))
-        }else{
-            getDocs(queryCollection)
-                .then( res => setListProducts(res.docs.map(product => ({id:product.id, ...product.data()})) ))
-            }
             setLoading(false)
             }, [idCategoria])
 
-        
+
     
 
     return (
