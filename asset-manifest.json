@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sitio-react/static/css/main.e77c1328.css",
-    "main.js": "/sitio-react/static/js/main.8e87cf98.js",
+    "main.js": "/sitio-react/static/js/main.24920fe0.js",
     "static/media/error.png": "/sitio-react/static/media/error.323a062022c950e0edce.png",
     "static/media/logo.jpeg": "/sitio-react/static/media/logo.4d7d6d1bd1dbed9a9fb7.jpeg",
     "index.html": "/sitio-react/index.html",
     "main.e77c1328.css.map": "/sitio-react/static/css/main.e77c1328.css.map",
-    "main.8e87cf98.js.map": "/sitio-react/static/js/main.8e87cf98.js.map"
+    "main.24920fe0.js.map": "/sitio-react/static/js/main.24920fe0.js.map"
   },
   "entrypoints": [
     "static/css/main.e77c1328.css",
-    "static/js/main.8e87cf98.js"
+    "static/js/main.24920fe0.js"
   ]
 }
