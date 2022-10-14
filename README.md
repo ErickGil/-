@@ -2,4 +2,4 @@
 
 Este Proyecto tratara de una pagina de venta de hielo
 
-Para esta entrega se conecto la coleccion de firestore con el listado de items y con el detalle de item
+Para esta entrega se crea ordenes de compra mostrando el id de la coleccion por consola
