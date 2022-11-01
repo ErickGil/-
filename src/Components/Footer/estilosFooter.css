@@ -1,0 +1,28 @@
+.containers.ext {
+    height: auto;
+    width: 100%;
+}
+.containers.sub{
+    height: 50px;
+    width: 434px;
+    margin-top: 30px;
+}
+.seccion{
+    display: flex ;
+    width: 100%;
+    height: auto;
+}
+.izq{
+    margin-right: 200px;
+    margin-left: 100px;
+}
+.der{
+    margin-left: 150px;
+    margin-right: 100px;
+}
+.footer-copyright.down{
+    justify-content: center;
+}
+.page-footer{
+    margin-top: auto;
+}

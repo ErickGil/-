@@ -48,9 +48,10 @@ const style = {
         display: "flex",
         justifyContent: "center",
         paddingBottom: "50px",
-        paddingTop: "100px",
+        paddingTop: "35px",
         paddingLeft: "20px",
-        backgroundColor: "#F3EED9"
+        backgroundColor: "#F3EED9",
+        marginTop: "137px",
         
     },
     estilosSpinner: {
